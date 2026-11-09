@@ -1,0 +1,52 @@
+name: Bug report
+description: Something on blackdroid.dev is broken or behaves incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Please fill in as much as you can.
+  - type: input
+    id: page
+    attributes:
+      label: Page or tool
+      description: Which page/tool shows the problem (e.g. /background-remover, /app/mailboxes)
+      placeholder: /some-tool
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include error messages or console output if any.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See error ...
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Chrome 130, Safari 18
+  - type: dropdown
+    id: signed_in
+    attributes:
+      label: Were you signed in?
+      options:
+        - Yes (Google)
+        - Yes (GitHub)
+        - No (anonymous)
